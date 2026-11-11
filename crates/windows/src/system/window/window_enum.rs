@@ -114,7 +114,7 @@ pub(crate) fn enumerate_top_level(
 /// live application windows (resolves issue #562).
 #[cfg(target_os = "windows")]
 fn try_attach_default_desktop() -> bool {
-    use windows_sys::Win32::UI::WindowsAndMessaging::{
+    use windows_sys::Win32::System::StationsAndDesktops::{
         DESKTOP_ENUMERATE, DESKTOP_READOBJECTS, OpenDesktopW, SetThreadDesktop,
     };
 
